@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for objects in object_list %}
+        <div>
+            {{objects.title}}
+            {% include "product_detail_snippet.html"  with product=objects %}
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

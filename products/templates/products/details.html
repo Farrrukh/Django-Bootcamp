@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Hi There!!! {{objects.title}}</h1>
+
+{% if request.path == '/' %}
+    <h1>Wellcome buddy</h1>
+{% else %}
+    {% include "product_detail_snippet.html" with product=objects %}
+{% endif %}
+{% endblock %}
+
